@@ -6,10 +6,19 @@ package com.example.dto;
 public class TabObjectDTO {
     private Integer id;
     private String nombre;
+    private String description;
 
     public TabObjectDTO(Integer id, String nombre){
         this.id = id;
         this.nombre = nombre;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getNombre() {
