@@ -4,36 +4,48 @@ package com.example.dto;
  * Created by DHbol on 5/9/2017.
  */
 public class TabObjectDTO {
-    private Integer id;
-    private String nombre;
-    private String description;
 
-    public TabObjectDTO(Integer id, String nombre){
-        this.id = id;
-        this.nombre = nombre;
+    private boolean assigned;
+    private boolean unAssigned;
+    private boolean team;
+    private boolean closed;
+
+    public TabObjectDTO(boolean assigned, boolean unAssigned, boolean team, boolean closed){
+        this.assigned = assigned;
+        this.unAssigned = unAssigned;
+        this.team = team;
+        this.closed = closed;
     }
 
-    public String getDescription() {
-        return description;
+    public boolean isClosed() {
+        return closed;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setClosed(boolean closed) {
+        this.closed = closed;
     }
 
-    public String getNombre() {
-        return nombre;
+    public boolean isTeam() {
+        return team;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setTeam(boolean team) {
+        this.team = team;
     }
 
-    public Integer getId() {
-        return id;
+    public boolean isUnAssigned() {
+        return unAssigned;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUnAssigned(boolean unAssigned) {
+        this.unAssigned = unAssigned;
+    }
+
+    public boolean isAssigned() {
+        return assigned;
+    }
+
+    public void setAssigned(boolean assigned) {
+        this.assigned = assigned;
     }
 }

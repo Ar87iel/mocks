@@ -11,10 +11,10 @@ public class TabResponse extends BaseResponse{
 
     private TabObjectDTO mainData;
 
-    public TabResponse(Integer id,String nombre){
+    public TabResponse(boolean assigned, boolean unAssigned, boolean team, boolean closed){
         this.setStatus(HttpStatus.OK.value());
         this.setMessage("all is ok");
-        mainData = new TabObjectDTO(id, nombre);
+        mainData = new TabObjectDTO(assigned, unAssigned, team, closed);
     }
 
     @Override

@@ -19,16 +19,16 @@ public class TabController {
 
     @RequestMapping(method = RequestMethod.GET, path = "/test")
     public Object getTabs(){
-        TabResponse tabResponse = new TabResponse(2,"lito");
+        TabResponse tabResponse = new TabResponse(true,false,true,false);
         return tabResponse;
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/list")
     public Object getAll(){
         List<TabObjectDTO> tabObjectDTOs = new ArrayList<>();
-        TabObjectDTO tabObjectDTO1 = new TabObjectDTO(1,"lito 1");
-        TabObjectDTO tabObjectDTO2 = new TabObjectDTO(2,"lito 2");
-        TabObjectDTO tabObjectDTO3 = new TabObjectDTO(3,"lito 3");
+        TabObjectDTO tabObjectDTO1 = new TabObjectDTO(true,false,true,false);
+        TabObjectDTO tabObjectDTO2 = new TabObjectDTO(true,true,true,true);
+        TabObjectDTO tabObjectDTO3 = new TabObjectDTO(true,true,true,true);
         tabObjectDTOs.add(tabObjectDTO1);
         tabObjectDTOs.add(tabObjectDTO2);
         tabObjectDTOs.add(tabObjectDTO2);
